@@ -85,4 +85,6 @@
 .calc-app-footer a {
     color: #3b8bba;
     text-decoration: none;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
 }
