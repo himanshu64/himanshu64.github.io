@@ -1,53 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>HIMANSHU SHARMA</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+        crossorigin="anonymous">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/side-menu.css">
+    <link rel="stylesheet" href="css/design.css">
+    <script src="js/extras/side-menu.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/logic.js"></script>
+    <script src="js/controller.js"></script>
 </head>
-<body class="blue lighten-5">
-   
-<div class="col s-12  light-blue accent-3">
-    <div class="container cyan darken-3">
-        <div class="ow_name">
-                <h1 class="center-align  name"></h1>
+
+<body ng-app="calcApp">
+
+    <div id="layout">
+        <!-- Menu toggle -->
+        <a href="#menu" id="menuLink" class="menu-link">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
+
+        <div id="menu">
+            <div class="pure-menu">
+                <a class="pure-menu-heading" href="/">Himanshu64</a>
+
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item">
+                        <a href="/" class="pure-menu-link">C</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div id="main">
+            <div ng-controller="calc" ng-init="number=0;num1=0;num2=0;flag=0;one=1;two=2;three=3;four=4;five=5;six=6;seven=7;eight=8;nine=9;zero=0;">
+                <div class="header">
+                    <h1>{{msg | uppercase}}</h1>
+
+                </div>
+
+                <div class="content">
+
+                    <div class="pure-g">
+
+
+                        <div class="pure-u-2-6 block-center">
+                            <div class="calculator">
+                                <input type="text" ng-model="number">
+                                <div class="calculator-buttons">
+                                    <button class="button-secondary pure-button is-clear" ng-click="clear()">C</button>
+
+                                    <button class="pure-button" ng-click="divide()">/</button>
+                                    <button class="pure-button" ng-click="append(seven)">{{seven}}</button>
+                                    <button class="pure-button" ng-click="append(eight)">{{eight}}</button>
+                                    <button class="pure-button" ng-click="append(nine)">{{nine}}</button>
+
+
+                                    <button class="pure-button" ng-click="addition()">+</button>
+                                    <button class="pure-button" ng-click="append(six)">{{six}}</button>
+                                    <button class="pure-button" ng-click="append(five)">{{five}}</button>
+                                    <button class="pure-button" ng-click="append(four)">{{four}}</button>
+
+
+                                    <button class="pure-button" ng-click="subtract()">-</button>
+                                    <button class="pure-button" ng-click="append(one)">{{one}}</button>
+                                    <button class="pure-button" ng-click="append(two)">{{two}}</button>
+                                    <button class="pure-button" ng-click="append(three)">{{three}}</button>
+
+
+                                    <button class="pure-button" ng-click="multiply()">*</button>
+
+                                    <button class="pure-button is-zero" ng-click="append(zero)">{{zero}}</button>
+                                    <button class="button-warning pure-button" ng-click="reset()">Reset</button>
+
+
+                                    <button class="button-success pure-button is-check" ng-click="check()">=</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- numberone = {{num1}} numbertwo = {{num2}} flag = {{flag}} Onumber = {{number}}-->
+                    </div>
+                </div>
+
+
+            </div>
+            <footer class="calc-app-footer">
+                <p class="text-center">
+                    <a href="https://www.linkedin.com/in/himanshu-sharma-0666a5129/">@Himanshu-Sharma</a>
+                    <i class="em em-wink"></i> -
+                    <a href="https://www.linkedin.com/in/shweta-singh-8a21a8115/">@shweta-Singh
+                        <i class="em em-woman"></i>
+                    </a>
+                </p>
+            </footer>
         </div>
     </div>
-</div>
-<div class="row">
-        <div class="col s1 red darken-2 col-height"></div>
-        <div class="col s1 deep-purple lighten-2 col-height"></div>
-        <div class="col s1 cyan col-height"></div>
-        <div class="col s1 indigo red darken-3 col-height"></div>
-        <div class="col s1 red accent-1 col-height"></div>
-        <div class="col s1 purple accent-3 col-height"></div>
-        <div class="col s1  teal accent-3 col-height"></div>
-        <div class="col s1  deep-purple lighten-4 col-height"></div>
-        <div class="col s1 lime accent-2 col-height"></div>
-        <div class="col s1 green accent-3 col-height"></div>
-        <div class="col s1 deep-orange darken-3 col-height"></div>
-        <div class="col s1 orange darken-4 col-height"></div>
-          
-</div>
-<div class="row">
-    <div class="col s3 col-height green accent-3"></div>
-    <div class="col s3 col-height light-green accent-3"></div>
-    <div class="col s3 col-height lime accent-3"></div>
-    <div class="col s3 col-height  orange accent-3"></div>
-</div>
 
-<div class="row">
-    <div class="col s6 col-height purple accent-3"></div>
-    <div class="col s6 col-height blue lighten-1"></div>
-</div>
-  
-<!--Scripts-->
 
-<script src="js/typed.min.js"></script>
-<script src="js/script.js"></script>
+
 </body>
+
 </html>

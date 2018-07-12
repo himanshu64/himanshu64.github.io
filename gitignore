@@ -6,9 +6,6 @@ logs
 *.log
 npm-debug.log*
 
-#npm env package file
-package-lock.json
-
 #vscode ignore files
 .vscode/*
 !.vscode/settings.json

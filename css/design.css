@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Aldrich');
+.calculator {
+    box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+    z-index: 1;
+    margin-top: 50px;
+}
+
+.calculator input[type="text"] {
+    padding: .5em .6em;
+    display: inline-block;
+    border: 2px solid #dadce0;
+    outline: none;
+    border-radius: 4px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    text-align: right;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Aldrich', sans-serif;
+}
+
+.block-center {
+    margin: auto;
+}
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-success {
+    background: rgb(28, 184, 65);
+    /* this is a green */
+}
+
+.button-error {
+    background: rgb(202, 60, 60);
+    /* this is a maroon */
+}
+
+.button-warning {
+    background: rgb(223, 117, 20);
+    /* this is an orange */
+}
+
+.button-secondary {
+    background: rgb(66, 184, 221);
+    /* this is a light blue */
+}
+
+.calculator-buttons {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+
+.pure-button {
+    font-family: 'Aldrich', sans-serif;
+}
+
+.is-zero,
+.is-clear {
+    grid-column: span 3;
+}
+
+.is-check {
+    grid-column: span 4;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.calc-app-footer {
+    background-color: #eee;
+    height: 5em;
+    padding-top: 20px;
+}
+
+.calc-app-footer a {
+    color: #3b8bba;
+    text-decoration: none;
+}
